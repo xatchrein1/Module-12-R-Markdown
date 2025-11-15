@@ -1,0 +1,81 @@
+---
+title: "R Markdown Module 12"
+output: html_document
+date: "2025-11-15"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+#Below is a description of R markdown described by R studio.
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+
+#R code chunk number 1
+
+#Step 1: load library or dataset
+summary(mtcars)
+library(ggplot2)
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{}
+
+
+#Step 2: Create a simple plot
+
+myplot <- ggplot(mtcars, (aes(x = mpg, y = hp)) +
+      geom_point() +
+      labs(title = "MPG vs HP",
+      x = "Miles per hour",
+      y = "horsepower"))
+
+
+myplot
+
+```
+
+
+## Latex Math
+
+```{}
+
+#R code #2: LaTeX math
+
+# LaTeX Math Examples
+
+#Inline math looks like this:  
+#The relationship $a + b = c$ holds for many algebraic systems.
+
+#Displayed equations appear centered:
+
+#$$
+#\alpha^2 + \beta^2 = \gamma^2
+#$$
+
+
+```
+
+## Reflections
+
+```{}
+#Here is my reflection
+
+#Using R Markdown feels very different from writing a normal report because the code, text, and math parts are all in one document.
+#The way its ran is also different. you have to run only the code chunks, and to compile it you press knit. 
+#Some things that I liked and dislike is that I keep forgetting to put ```, my latex wasnt working so I commented it out, and that it was fairly easy to understand errors when running my document while also being easy for me to generate plots.
+
+```
